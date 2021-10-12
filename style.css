@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        #ac66cc85, 
+        #19052985
+    ), 
+    url(img/disco.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); 
+    position: relative;
+}
+
+.logo-name{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+}
+
+a.logo{
+    text-decoration: none;
+    color: #000;
+}
+
+nav{
+    display: flex;
+    color: #d3e0ea;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 18px;
+    padding-top: 60px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #d3e0ea;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #f6f5f5;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary{
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-top: 65px;
+    margin-bottom: 70px;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 25px;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+
+/* kasih nama keyframes bebas */
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+        /* transX -100px artinya bergerak ke kiri, kalo + bergerak ke kanan */
+    }
+    80%{
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link, .btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0 ,0, .2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0 ,0, .2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.intro-title{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.intro-title .intro-title-heading{
+    color: #511281;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.container-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px
+}
+
+.left-column{
+    flex: 3;
+}
+
+.did-you-know{
+    text-align: center;
+}
+
+.right-column{
+    flex: 2;
+    text-align: right;
+}
+
+.right-column .img-audio{
+    width: 500px;
+}
+
+a.izotope{
+    text-decoration: none;
+}
+
+section.section-testi{
+    background-image: 
+    linear-gradient(
+        to right bottom, 
+        #8c7099, 
+        #9d019165
+    ),
+    url(img/beachpartyimg.jpg);
+    background-size: cover;
+    position: relative;
+    height: 1000px;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+}
+
+.testi-title{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 240px;
+    padding-bottom: 70px;
+}
+
+.testi-title .testi-title-heading{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+
+.left-side, .mid-side, .right-side{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0 ,0, .2);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+img.testi-img{
+    border-radius: 100%;
+    padding-bottom: 15px;
+}
+
+.footer{
+    background-color: #000;
+    height: 200px;
+    position: relative;
+}
+
+.footer .footer-logo-name{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 26px;
+    padding-top: 50px;
+}
+
+.footer .copyright{
+    text-align: center;
+    color: #fff;
+    padding-top: 40px;
+}
+
+/* album page */
+.container-card{
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    width: 30%;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card-header{
+    height: 150px;
+    background-color: #ffe0d8;
+}
+
+.card-content{
+    text-align: center;
+    margin: 15px;
+}
+
+.btn-download{
+    background-color: #2ec1ac;
+    color: #eee;
+    border-radius: 100px;
+    padding: 4px
+}
+
+/* about us page */
+.intro-title-about{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.intro-title-about .intro-title-about-heading{
+    color: #511281;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.about-us-desc{
+    width: 70%;
+    margin: auto;
+}
+
+.about-img{
+    width: 50%;
+    display: block;
+    margin: auto;
+    padding: 50px;
+}
+
+.about-us-contact{
+    width: 40%;
+    margin: auto;
+    padding-top: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.about-us-contact h3{
+    letter-spacing: 2px;
+}
+
+.contact-link{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.contact-link a{
+    text-decoration: none;
+}
+
+/* pricing page */
+.intro-title-pricing{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.intro-title-pricing .intro-title-pricing-heading{
+    color: #511281;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.container-pricing{
+    max-width: 1080px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.card-pricing{
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    width: 35%;
+    overflow: hidden;
+    margin: 10px;
+    line-height: 2.3;
+}
+
+.card-header-pricing{
+    height: 350px;
+    position: relative;
+    /* background-color: #ac66cc85; */
+}
+
+.card-header-pricing p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-header-pricing .price{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.card-header-pricing .download{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.card-content-pricing{
+    height: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.btn-pricing{
+    position: absolute;
+    left: 20%;
+    top: 22%;
+}
+
+.pricing1{
+    background-color: #ac66cc85;
+}
+
+.pricing2{
+    background-color: #1cc5dc85;
+}
+
+.pricing3{
+    background-color: #f4a9a885;
+}
+
+
+
+

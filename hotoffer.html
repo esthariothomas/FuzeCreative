@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Offer</title>
+    <link rel="stylesheet" href="style-offer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-form">
+        <div class="title-form">
+            Get The Offer Now!
+        </div>
+        <form id="formRegist" action="" onsubmit="validate()">
+            <div class="user-details">
+                <div class="input">
+                    <h4>Name</h4>
+                    <input class="input-text" type="text" name="" id="name" maxlength="20" minlength="5" placeholder="e.g. Thomas Esthario" required>
+                </div>
+
+                <div class="input">
+                    <h4>Email</h4>
+                    <input class="input-text" type="email" name="" id="email" placeholder="e.g. thomasesthario@outlook.com " required>
+                </div>
+
+                <div class="input">
+                    <h4>Username</h4>
+                    <input class="input-text" type="text" name="" id="username" placeholder="e.g. @thomasthom" required>
+                </div>
+
+                <div class="input">
+                    <h4>Address</h4>
+                    <textarea class="input-text" name="" id="address" cols="50" rows="10" placeholder="Must contain 'street'"></textarea>
+                </div>
+            
+                <div class="input">
+                    <h4>Gender</h4>
+                    <input type="radio" name="gender" id="male">Male
+                    <input type="radio" name="gender" id="female">Female
+                </div>
+                
+                <div class="input">
+                    <h4>Region</h4>
+                    <select name="" id="region">
+                        <option value="Region"></option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select>
+                </div>
+
+                <div class="input">
+                    <h4>Music Category</h4>
+                    <select name="" id="music">
+                        <option value="Music Category"></option>
+                        <option value="rnb">RnB</option>
+                        <option value="Retro">Retro</option>
+                        <option value="Hip Hop">Hip Hop</option>
+                        <option value="Blues">Blues</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Reggae">Reggae</option>
+                        <option value="Country">Country</option>
+                        <option value="808">808</option>
+                        <option value="Pop">Pop</option>
+                    </select>
+                </div>
+                
+                <div class="input">
+                    <h4>Profile Picture</h4>
+                    <input class="input-text" type="file" name="" id="file">
+                </div>
+            </div>
+
+            <div class="register-button">
+                <input class="input-text" type="submit" value="Register">
+            </div>
+            <label id="lblerror" for=""></label>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ac66cc, #5d1494);
+}
+
+.container-form{
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.container-form .title-form{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+input.input-text{
+    height: 35px;
+    width: 100%;
+}
+
